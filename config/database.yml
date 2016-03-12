@@ -1,0 +1,16 @@
+development: &dev
+  adapter: postgresql
+  encoding: unicode
+  database: road_not_taken_development
+  pool: 5
+  username: postgres
+  password:
+  #host: localhost
+
+test:
+  <<: *dev
+  database: road_not_taken_test
+
+production:
+  <<: *dev
+  database: road_not_taken_production
