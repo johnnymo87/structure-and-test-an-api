@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "required": [
+    "volunteer_opportunities",
+    "meta"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "volunteer_opportunities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "organisation_id",
+          "is_current",
+          "name",
+          "organisation_name",
+          "start_date",
+          "end_date",
+          "duration"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "organisation_id": { "type": ["string"] },
+          "is_current": { "type": "boolean" },
+          "name": { "type": "string" },
+          "organisation_name": { "type": "string" },
+          "start_date": { "type": "string" },
+          "end_date": { "type": ["string", "null"] },
+          "duration": { "type": ["number", "null"] }
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "moment_date_format"
+      ],
+      "properties": {
+        "moment_date_format": { "type": "string" }
+      }
+    }
+  }
+}
